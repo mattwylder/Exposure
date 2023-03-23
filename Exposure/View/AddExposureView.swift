@@ -11,8 +11,6 @@ struct AddExposureView: View {
 
     @ObservedObject var viewModel = AddExposureViewModel()
     
-    
-    
     let completion: (Exposure) -> Void
     
     var body: some View {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ExposureViewModel: ObservableObject {
+class ExposureListViewModel: ObservableObject {
     
     @Published var exposures: [Exposure]
     init(testPopulate: Bool = false) {
