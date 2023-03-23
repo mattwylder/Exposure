@@ -17,7 +17,9 @@ struct ContentView: View {
             }
             .toolbar {
                 NavigationLink(
-                    destination: AddExposureView(viewModel: self.viewModel),
+                    destination: AddExposureView { newExposure in
+                        viewModel.exposures.append(newExposure)
+                    },
                     label: { Image(systemName: "plus") }
                 )
             }

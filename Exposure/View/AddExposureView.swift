@@ -8,17 +8,37 @@
 import SwiftUI
 
 struct AddExposureView: View {
+
+    @ObservedObject var viewModel = AddExposureViewModel()
     
-    // What is more MVVM, mutating the viewModel here, or returning an object to the previous view?
-    @ObservedObject var viewModel: ExposureViewModel
+    
+    
+    let completion: (Exposure) -> Void
     
     var body: some View {
-        Text("Test")
+        VStack {
+            TextField("Subject", text: $viewModel.subject)
+            TextField("Aperture", text: $viewModel.aperture)
+            TextField("Shutter Speed", text: $viewModel.shutterSpeed)
+            TextField("ASA", text: $viewModel.asa)
+            
+            Button("Add Exposure") {
+                completion(
+                    Exposure(
+                        id: 3,
+                        aperture: viewModel.aperture,
+                        shutterSpeed: viewModel.shutterSpeed,
+                        asa: viewModel.shutterSpeed,
+                        subject: viewModel.subject
+                    )
+                )
+            }
+        }
     }
 }
 
 struct AddExposureView_Previews: PreviewProvider {
     static var previews: some View {
-        AddExposureView(viewModel: ExposureViewModel(testPopulate: true))
+        AddExposureView(viewModel: AddExposureViewModel(), completion: {_ in })
     }
 }
