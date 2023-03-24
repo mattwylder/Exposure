@@ -9,27 +9,17 @@ import SwiftUI
 
 struct AddExposureView: View {
 
-    @ObservedObject var viewModel = AddExposureViewModel()
-    
-    let completion: (Exposure) -> Void
+    @ObservedObject var viewModel: ExposureViewModel
     
     var body: some View {
         VStack {
-            TextField("Subject", text: $viewModel.subject)
-            TextField("Aperture", text: $viewModel.aperture)
-            TextField("Shutter Speed", text: $viewModel.shutterSpeed)
-            TextField("ASA", text: $viewModel.asa)
+            TextField("Subject", text: $viewModel.newSubject)
+            TextField("Aperture", text: $viewModel.newAperture)
+            TextField("Shutter Speed", text: $viewModel.newShutterSpeed)
+            TextField("ASA", text: $viewModel.newASA)
             
             Button("Add Exposure") {
-                completion(
-                    Exposure(
-                        id: 3,
-                        aperture: viewModel.aperture,
-                        shutterSpeed: viewModel.shutterSpeed,
-                        asa: viewModel.shutterSpeed,
-                        subject: viewModel.subject
-                    )
-                )
+                viewModel.addExposure()
             }
         }
     }
@@ -37,6 +27,6 @@ struct AddExposureView: View {
 
 struct AddExposureView_Previews: PreviewProvider {
     static var previews: some View {
-        AddExposureView(viewModel: AddExposureViewModel(), completion: {_ in })
+        AddExposureView(viewModel: ExposureViewModel(testPopulate: true))
     }
 }

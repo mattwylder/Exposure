@@ -7,9 +7,17 @@
 
 import Foundation
 
-class ExposureListViewModel: ObservableObject {
+class ExposureViewModel: ObservableObject {
     
     @Published var exposures: [Exposure]
+    
+    var selectedIndex: Int?
+    
+    @Published var newSubject = ""
+    @Published var newAperture = ""
+    @Published var newShutterSpeed = ""
+    @Published var newASA = ""
+    
     init(testPopulate: Bool = false) {
         if testPopulate {
             self.exposures = [
@@ -32,6 +40,13 @@ class ExposureListViewModel: ObservableObject {
     }
     
     func addExposure() {
-        self.exposures.append(Exposure(id: exposures.count, aperture: "f8", shutterSpeed: "125", asa: "400", subject: "Bird"))
+        self.exposures.append(
+            Exposure(
+                id: exposures.count,
+                aperture: newAperture,
+                shutterSpeed: newShutterSpeed,
+                asa: newASA,
+                subject: newSubject)
+        )
     }
 }

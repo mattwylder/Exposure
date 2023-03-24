@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E238AB1F29CA6F84006EDC14 /* AddExposureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E238AB1E29CA6F84006EDC14 /* AddExposureViewModel.swift */; };
 		E2DF6A6A29CA39A100D5FB96 /* ExposureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DF6A6929CA39A100D5FB96 /* ExposureApp.swift */; };
 		E2DF6A6C29CA39A100D5FB96 /* ExposureListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DF6A6B29CA39A100D5FB96 /* ExposureListView.swift */; };
 		E2DF6A6E29CA39A300D5FB96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2DF6A6D29CA39A300D5FB96 /* Assets.xcassets */; };
@@ -17,7 +16,7 @@
 		E2DF6A8729CA39A300D5FB96 /* ExposureUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DF6A8629CA39A300D5FB96 /* ExposureUITestsLaunchTests.swift */; };
 		E2DF6A9429CA39CC00D5FB96 /* Exposure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DF6A9329CA39CC00D5FB96 /* Exposure.swift */; };
 		E2DF6A9629CA3A2500D5FB96 /* ExposureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DF6A9529CA3A2500D5FB96 /* ExposureView.swift */; };
-		E2DF6A9A29CA5F1B00D5FB96 /* ExposureListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DF6A9929CA5F1B00D5FB96 /* ExposureListViewModel.swift */; };
+		E2DF6A9A29CA5F1B00D5FB96 /* ExposureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DF6A9929CA5F1B00D5FB96 /* ExposureViewModel.swift */; };
 		E2DF6A9F29CA6CDF00D5FB96 /* AddExposureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DF6A9E29CA6CDF00D5FB96 /* AddExposureView.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +38,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E238AB1E29CA6F84006EDC14 /* AddExposureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExposureViewModel.swift; sourceTree = "<group>"; };
 		E2DF6A6629CA39A100D5FB96 /* Exposure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exposure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2DF6A6929CA39A100D5FB96 /* ExposureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExposureApp.swift; sourceTree = "<group>"; };
 		E2DF6A6B29CA39A100D5FB96 /* ExposureListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExposureListView.swift; sourceTree = "<group>"; };
@@ -52,7 +50,7 @@
 		E2DF6A8629CA39A300D5FB96 /* ExposureUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExposureUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E2DF6A9329CA39CC00D5FB96 /* Exposure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exposure.swift; sourceTree = "<group>"; };
 		E2DF6A9529CA3A2500D5FB96 /* ExposureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExposureView.swift; sourceTree = "<group>"; };
-		E2DF6A9929CA5F1B00D5FB96 /* ExposureListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExposureListViewModel.swift; sourceTree = "<group>"; };
+		E2DF6A9929CA5F1B00D5FB96 /* ExposureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExposureViewModel.swift; sourceTree = "<group>"; };
 		E2DF6A9E29CA6CDF00D5FB96 /* AddExposureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExposureView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,8 +158,7 @@
 		E2DF6A9D29CA5FCE00D5FB96 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				E2DF6A9929CA5F1B00D5FB96 /* ExposureListViewModel.swift */,
-				E238AB1E29CA6F84006EDC14 /* AddExposureViewModel.swift */,
+				E2DF6A9929CA5F1B00D5FB96 /* ExposureViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -299,10 +296,9 @@
 				E2DF6A9429CA39CC00D5FB96 /* Exposure.swift in Sources */,
 				E2DF6A6C29CA39A100D5FB96 /* ExposureListView.swift in Sources */,
 				E2DF6A9F29CA6CDF00D5FB96 /* AddExposureView.swift in Sources */,
-				E238AB1F29CA6F84006EDC14 /* AddExposureViewModel.swift in Sources */,
 				E2DF6A6A29CA39A100D5FB96 /* ExposureApp.swift in Sources */,
 				E2DF6A9629CA3A2500D5FB96 /* ExposureView.swift in Sources */,
-				E2DF6A9A29CA5F1B00D5FB96 /* ExposureListViewModel.swift in Sources */,
+				E2DF6A9A29CA5F1B00D5FB96 /* ExposureViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

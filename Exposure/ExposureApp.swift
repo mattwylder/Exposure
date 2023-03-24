@@ -11,7 +11,7 @@ import SwiftUI
 struct ExposureApp: App {
     var body: some Scene {
         WindowGroup {
-            ExposureListView(viewModel: ExposureListViewModel(testPopulate: true))
+            ExposureListView(viewModel: ExposureViewModel(testPopulate: true))
         }
     }
 }

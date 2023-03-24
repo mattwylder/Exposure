@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ExposureListView: View {
-    @ObservedObject var viewModel: ExposureListViewModel
+    @ObservedObject var viewModel: ExposureViewModel
     
     var body: some View {
         NavigationView {
@@ -17,9 +17,7 @@ struct ExposureListView: View {
             }
             .toolbar {
                 NavigationLink(
-                    destination: AddExposureView { newExposure in
-                        viewModel.exposures.append(newExposure)
-                    },
+                    destination: AddExposureView(viewModel: self.viewModel),
                     label: { Image(systemName: "plus") }
                 )
             }
@@ -29,6 +27,6 @@ struct ExposureListView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ExposureListView(viewModel: ExposureListViewModel(testPopulate: true))
+        ExposureListView(viewModel: ExposureViewModel(testPopulate: true))
     }
 }
