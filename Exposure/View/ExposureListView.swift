@@ -27,6 +27,6 @@ struct ExposureListView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ExposureListView(viewModel: ExposureViewModel(testPopulate: true))
+        ExposureListView(viewModel: ExposureViewModel())
     }
 }

@@ -27,6 +27,6 @@ struct AddExposureView: View {
 
 struct AddExposureView_Previews: PreviewProvider {
     static var previews: some View {
-        AddExposureView(viewModel: ExposureViewModel(testPopulate: true))
+        AddExposureView(viewModel: ExposureViewModel())
     }
 }

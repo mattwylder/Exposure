@@ -7,17 +7,28 @@
 
 import Foundation
 
+/// Describes the settings used for an exposed image on a roll of film.
 struct Exposure: Identifiable {
-    let id: Int // id should be exposure number in roll?
-    let aperture: String // maybe add some kind of slider with each stop, with a button to unlock it and find half-way spots?
+    /// The number of the exposure on the roll.
+    let id: Int
+
+    /// The aperture at which the exposure was shot.
+    let aperture: String
+    
+    /// The shutter speed at which the exposure was shot.
     let shutterSpeed: String
+    
+    /// The ASA of the film roll.
     let asa: String
+    
+    /// The subject of the photograph.
     let subject: String
+    
+//    /// The zoom focal length of the exposure.
 //    let focalLength: Int
 }
 
 /**
- Okay, what can we do here?
  The focal length could be recorded somewhere to calculate real aperture based on zoom. How to do it iteratively? Hard code my existing lenses into the app?
  Start with the macro lens.
  when adding a new exposure: specify `setAperature` `focalLength` `shutterSpeed` and `ISO`
