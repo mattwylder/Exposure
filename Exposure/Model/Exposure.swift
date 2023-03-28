@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// Describes the settings used for an exposed image on a roll of film.
+/// Describes the camera settings used to expose an image on a roll of film.
 struct Exposure: Identifiable {
     /// The number of the exposure on the roll.
     let id: Int
